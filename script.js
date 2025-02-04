@@ -1,4 +1,4 @@
-const RANDOM_QUOTE_API_URL = 'http://api.quotable.io/random'
+const RANDOM_QUOTE_API_URL = 'https://favqs.com/api/qotd'
 const quoteDisplayElement = document.getElementById('quoteDisplay')
 const quoteInputElement = document.getElementById('quoteInput')
 const timerElement = document.getElementById('timer')
@@ -86,7 +86,7 @@ quoteInputElement.addEventListener('input', () => {
 function getRandomQuote() {
   return fetch(RANDOM_QUOTE_API_URL)
     .then(response => response.json())
-    .then(data => data.content)
+    .then(data => data.quote.body);
 }
 
 async function renderNewQuote() {
@@ -116,6 +116,3 @@ function getTimerTime() {
 }
 
 renderNewQuote()
-
-
-
