@@ -1,4 +1,4 @@
-const RANDOM_QUOTE_API_URL = 'https://favqs.com/api/qotd'
+const RANDOM_QUOTE_API_URL = 'https://programming-quotes-api.azurewebsites.net/api/quotes/random'
 const quoteDisplayElement = document.getElementById('quoteDisplay')
 const quoteInputElement = document.getElementById('quoteInput')
 const timerElement = document.getElementById('timer')
@@ -86,7 +86,7 @@ quoteInputElement.addEventListener('input', () => {
 function getRandomQuote() {
   return fetch(RANDOM_QUOTE_API_URL)
     .then(response => response.json())
-    .then(data => data.quote.body);
+    .then(data => data.text);
 }
 
 async function renderNewQuote() {
