@@ -1,6 +1,7 @@
 const RANDOM_QUOTE_API_URL = 'https://api.quotable.io/random'
 const quoteDisplayElement = document.getElementById('quoteDisplay')
 const quoteInputElement = document.getElementById('quoteInput')
+const unavailibleMode = document.getElementById('unavailible')
 const timerElement = document.getElementById('timer')
 const keySound = new Audio('https://www.myinstants.com/media/sounds/typewriter.mp3');
 const errorSound = new Audio('https://www.myinstants.com/media/sounds/typing-error.mp3')
@@ -51,6 +52,10 @@ function createTypewriterIcon() {
 for (let i = 0; i < 30; i++) {
   createTypewriterIcon();
 }
+
+unavailibleMode.addEventListener('click', () => {
+  errorSound.play().catch(error => console.error('Error while playing:', error));
+})
 
 quoteInputElement.addEventListener('input', () => {
   const arrayQuote = quoteDisplayElement.querySelectorAll('span')
@@ -116,6 +121,3 @@ function getTimerTime() {
 }
 
 renderNewQuote()
-
-
-
