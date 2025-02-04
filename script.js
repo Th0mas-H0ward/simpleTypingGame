@@ -121,3 +121,6 @@ function getTimerTime() {
 }
 
 renderNewQuote()
+
+
+
