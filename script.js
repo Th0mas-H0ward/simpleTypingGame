@@ -1,4 +1,4 @@
-const RANDOM_QUOTE_API_URL = 'https://programming-quotes-api.azurewebsites.net/api/quotes/random'
+const RANDOM_QUOTE_API_URL = 'https://api.allorigins.win/raw?url=https://zenquotes.io/api/random';
 const quoteDisplayElement = document.getElementById('quoteDisplay')
 const quoteInputElement = document.getElementById('quoteInput')
 const timerElement = document.getElementById('timer')
@@ -84,9 +84,9 @@ quoteInputElement.addEventListener('input', () => {
 })
 
 function getRandomQuote() {
-  return fetch(RANDOM_QUOTE_API_URL)
-    .then(response => response.json())
-    .then(data => data.text);
+  return fetch(RANDOM_QUOTE_API_URL, { cache: 'no-store' }) // Запрос без кеша
+    .then(response => response.json()) 
+    .then(data => data[0].q);
 }
 
 async function renderNewQuote() {
@@ -116,3 +116,6 @@ function getTimerTime() {
 }
 
 renderNewQuote()
+
+
+
