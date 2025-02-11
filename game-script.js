@@ -1,4 +1,4 @@
-const RANDOM_QUOTE_API_URL = 'https://api.allorigins.win/raw?url=https://zenquotes.io/api/random';
+const RANDOM_QUOTE_API_URL = 'https://api.adviceslip.com/advice';
 const quoteDisplayElement = document.getElementById('quoteDisplay')
 const quoteInputElement = document.getElementById('quoteInput')
 const timerElement = document.getElementById('timer')
@@ -40,7 +40,7 @@ quoteInputElement.addEventListener('input', () => {
 function getRandomQuote() {
   return fetch(RANDOM_QUOTE_API_URL, { cache: 'no-store' })
     .then(response => response.json()) 
-    .then(data => data[0].q);
+    .then(data => data.slip.advice);
 }
 
 async function renderNewQuote() {

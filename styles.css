@@ -105,7 +105,6 @@ body, .quote-input {
 button {
   border: .2rem solid rgb(55, 25, 21); 
   border-radius: .5rem; 
-  background-color: #F7E7CF; 
   font-size: clamp(1rem, 3vw, 1.4rem);
   color: rgb(55, 25, 21); 
   font-weight: bold; 
@@ -120,6 +119,7 @@ button:hover {
 }
 
 .mode-selection-button { 
+  background-color: #F7E7CF; 
   position: relative; 
   width: 80%; 
   margin: 1rem; 
@@ -131,6 +131,7 @@ button:hover {
   top: 2rem; 
   left: 2rem;
   padding: 1rem; 
+  background-color: rgba(247, 231, 207, 0.7); 
   box-shadow: 5px 5px 10px rgba(55, 25, 21, 0.6);
 }
 
