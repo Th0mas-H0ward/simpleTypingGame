@@ -3,13 +3,15 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="./styles.css">
-  <script src="./script.js" defer></script>
-  <title>Normal</title>
+  <script src="./game-script.js" defer></script>
+  <script src="./icon-animation-script.js" defer></script>
+  <title>Zen Mode</title>
 </head>
 
 <body>
+  <button class="back-button" onclick="window.location.href = './index.html'">Back</button>
   <div class="timer" id="timer"></div>
   <div class="container">
     <div class="quote-display" id="quoteDisplay"></div>
