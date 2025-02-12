@@ -18,8 +18,7 @@ body {
   border: .2rem solid rgb(55, 25, 21); 
   border-radius: 0.5rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   overflow-x: hidden;
 }
 
@@ -41,8 +40,9 @@ body, .quote-input {
 }
 
 .timer { 
-  position: fixed;
-  top: 2.5rem; 
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); 
   font-size: clamp(2rem, 5vw, 5rem);
   color: rgb(55, 25, 21); 
   font-weight: bold; 
@@ -77,6 +77,21 @@ body, .quote-input {
 .incorrect { 
   color: red; 
   text-decoration: underline; 
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  padding: 1rem;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .content { 
@@ -127,12 +142,10 @@ button:hover {
 }
 
 .back-button {
-  position: fixed;
-  top: 2rem; 
-  left: 2rem;
   padding: 1rem; 
   background-color: rgba(247, 231, 207, 0.7); 
   box-shadow: 5px 5px 10px rgba(55, 25, 21, 0.6);
+  order: -1;
 }
 
 .logo { 
@@ -161,11 +174,16 @@ button:hover {
 
 @media (max-width: 768px) {
 
-  /* 0.3 вычислено с помощью подгонки. Подумать, как сделать
-  чисто. */
-  .back-button {
-    left: calc(50% - min(350px, 45%) + 0.3rem);
+  /* Работает центрирование по левому краю для кнопки и контента, но контент подпрыгивает вверх */
+  /* .header {
+    width: min(700px, 90%);
+    margin: 0 auto;
   }
+
+  .back-button {
+    position: absolute;
+    left: 0;
+  } */
   
   .container {
     margin: 1rem;
