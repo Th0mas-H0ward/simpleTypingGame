@@ -47,9 +47,7 @@ finishButtonElement.addEventListener('click', () => {
   document.getElementById('quoteDisplay').remove();
   document.getElementById('quoteInput').remove();
   document.getElementById('doneButton').remove();
-
-  const timerElement = document.getElementById('timer');
-  timerElement.textContent = 'Your time: ' + timerElement.textContent;
+  document.getElementById('timer').remove();
 
   const scoreContainerElement = document.createElement('div');
   scoreContainerElement.classList.add('score-container');
