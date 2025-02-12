@@ -150,6 +150,12 @@ button:hover {
   order: -1;
 }
 
+.done-button {
+  padding: 1rem; 
+  background-color: rgba(247, 231, 207, 0.7); 
+  box-shadow: 5px 5px 10px rgba(55, 25, 21, 0.6);
+}
+
 .logo { 
   position: relative;
   width: 100%;
@@ -176,17 +182,6 @@ button:hover {
 
 @media (max-width: 768px) {
 
-  /* Работает центрирование по левому краю для кнопки и контента, но контент подпрыгивает вверх */
-  /* .header {
-    width: min(700px, 90%);
-    margin: 0 auto;
-  }
-
-  .back-button {
-    position: absolute;
-    left: 0;
-  } */
-  
   .container {
     margin: 1rem;
     padding: 0.5rem;
