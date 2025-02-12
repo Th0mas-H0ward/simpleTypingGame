@@ -89,9 +89,11 @@ body, .quote-input {
 }
 
 .main {
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .content { 
@@ -188,6 +190,7 @@ button:hover {
   .container {
     margin: 1rem;
     padding: 0.5rem;
+    width: 100%;
   }
   
   .menu-container {
